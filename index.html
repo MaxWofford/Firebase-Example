@@ -4,16 +4,21 @@
     <meta charset="utf-8">
     <title>Firebase-Example</title>
     <!--Resources-->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://cdn.firebase.com/v0/firebase.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript">
+    var ref = new Firebase("https://rizer-email.firebaseio.com/contacts"); /*Initialize firebase*/
+
+    var userEmail = document.getElementById("emailInput").value; /*Read the email the user typed in*/
+    var userName = document.getElementById("nameInput").value; /*Read the name the user typed in*/
+    </script>
 </head>
 <body>
     
-    <input type="email" id="email-input">
-    <input type="name" id="name-input">
-    <input type="submit" id="submit-input">
+    <input type="email" id="emailInput" placeholder="Your Email" value="cake@gmail.com">
+    <input type="name" id="nameInput" placeholder="Your Username" value="cake">
+    <input type="button" value="submit" onClick="submit(userEmail, userName);alert('cake');">
     
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.0.js"></script>
-    <script src="https://cdn.firebase.com/v0/firebase.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

@@ -1,12 +1,10 @@
 var ref = new Firebase("https://rizer-email.firebaseio.com/contacts"); /*Initialize firebase*/
 
-var userEmail = document.getElementById("email-input").value; /*Read the email the user typed in*/
-var userName = document.getElementById("name-input").value; /*Read the name the user typed in*/
+var userEmail = document.getElementById("emailInput").value; /*Read the email the user typed in*/
+var userName = document.getElementById("nameInput").value; /*Read the name the user typed in*/
 
-var clickSubmit = document.getElementById("submitButton"); /*Read when the user presses submit*/
-
-function submit(userName, userEmail) {
+function submit(userEmail, userName) {
     alert("sending email"); /*Popup window*/
- 	ref.push({id: userName, email: userEmail}); /*Pushes data to firebase*/
+ 	ref.push({email: userEmail, id: "userName"}); /*Pushes data to firebase*/
     return false;
 }
