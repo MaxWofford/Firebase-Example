@@ -5,6 +5,6 @@ var userName = document.getElementById("nameInput").value; /*Read the name the u
 
 function submit(userEmail, userName) {
     alert("sending email"); /*Popup window*/
- 	ref.push({email: userEmail, id: "userName"}); /*Pushes data to firebase*/
+ 	ref.push({email: userEmail, id: userName}); /*Pushes data to firebase*/
     return false;
 }
